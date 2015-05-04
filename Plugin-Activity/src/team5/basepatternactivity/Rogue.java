@@ -4,7 +4,7 @@ import team5.basepatternactivity.Plugin;
 
 /**
  * Rogue plugin which is not granted any permissions and will thus throw a
- * {@link SecurityException} when its {@link #run()} method is called.
+ * SecurityException when its run() method is called.
  */
 public class Rogue implements Plugin {
 

@@ -26,7 +26,7 @@ public class Gateway {
         this.dbase = dbase;
         this.user = user;
         this.password = pswd;
-        this.dbaseName = dbms + "/" + dbase;
+        this.dbaseName = dbms + dbase;
         try {
             Class.forName(driver);
             connection = DriverManager.getConnection(dbaseName, user, password);
@@ -36,6 +36,7 @@ public class Gateway {
                 try {
                     connection = DriverManager.getConnection(dbaseName + ";create=true");
                     statement = connection.createStatement();
+                    statement.executeUpdate("CREATE DATABASE databasename");
                 } catch (Exception e2) {
                      System.err.println("can't create " + dbaseName + " because " + e2);
                 }
