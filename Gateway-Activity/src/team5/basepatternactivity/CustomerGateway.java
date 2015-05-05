@@ -5,9 +5,9 @@ import java.sql.SQLException;
 
 public class CustomerGateway extends Gateway {
 
-	public CustomerGateway(String driver, String dbms, String dbase, String user,
+	public CustomerGateway(String driver, String dbaseName, String user,
 			String pswd) {
-		super(driver, dbms, dbase, user, pswd);
+		super(driver, dbaseName, user, pswd);
 	}
 	
 	public void createCustomer(int customerID, String lastName, String firstName, String address) throws SQLException {
